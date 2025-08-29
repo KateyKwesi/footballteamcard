@@ -1,0 +1,92 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --barca-blue: #004D98;
+    --barca-red: #A50044;
+    --barca-gold: #EDBB00;
+    --white: #ffffff;
+    --light-grey: #f5f6f7;
+}
+
+body {
+    background: linear-gradient(135deg, var(--barca-blue), var(--barca-red));
+    text-align: center;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+}
+
+.title,
+.options-label,
+.team-stats,
+footer {
+    color: var(--white);
+}
+
+.title {
+    margin: 1.3rem 0;
+    color: var(--barca-gold);
+}
+
+.team-stats {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    font-size: 1.3rem;
+    margin: 1.2rem 0;
+}
+
+.options-label {
+    font-size: 1.2rem;
+    color: var(--barca-gold);
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.player-card {
+    background: var(--light-grey);
+    padding: 1.3rem;
+    margin: 1.2rem;
+    width: 300px;
+    border-radius: 15px;
+    border: 3px solid var(--barca-blue);
+    box-shadow: 0 0 10px var(--barca-red);
+    transition: transform 0.2s ease-in-out;
+}
+
+.player-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px var(--barca-gold);
+}
+
+footer {
+    margin-top: 2rem;
+    font-weight: bold;
+    color: var(--barca-gold);
+}
+
+footer a {
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--barca-gold);
+}
+
+@media (max-width: 768px) {
+    .team-stats {
+        flex-direction: column;
+    }
+}
